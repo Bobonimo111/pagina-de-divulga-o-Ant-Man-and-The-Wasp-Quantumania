@@ -1,0 +1,41 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+main {
+
+    z-index: 10;
+}
+
+#title-first {
+    font-size: 20px;
+}
+
+#title-seccond {
+    font-size: 32px;
+    display: block;
+}
+
+#sinopse-header {
+    font-size: 20px;
+}
+
+#sinopse-body {
+    font-size: 16px;
+}
+
+#img-poster {
+    height: 28rem;
+    width: 18rem;
+    object-fit: cover;
+}
+
+#background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
