@@ -11,13 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body class="d-flex">
     <div id="background">
         <div id="background-mask"></div>
-        <img id="background-img" src="public/image/background_anti_man_quantumania.jpg">
+        <img id="background-img" src="src/image/background_anti_man_quantumania.jpg">
     </div>
 
     <main class="container d-flex justify-content-center align-items-center mt-5 mb-5 text-white">
@@ -29,35 +29,15 @@
                             <span id="title-seccond">Quantumania</span>
                 </h1>
                 <!-- sinopse -->
-                <p class="mt-3">
+                <p class="mt-3" id="sinopse">
                     <span id="sinopse-header">
                         Sinopse:
                     </span>
                     <span id="sinopse-body">
-
                         Em Homem-Formiga e a Vespa: Quantumania, quando Cassie (Kathryn Newton), filha de Scott Lang
                         (Paul
                         Rudd), desenvolve um dispositivo que permitiria a comunicação com o reino quântico, o
-                        experimento
-                        termina em desastre: Cassie, Scott e sua companheira e heroína, Vespa, Hope van Dyne (Evangeline
-                        Lilly)
-                        involuntariamente se encontram no reino místico. Unindo forças com os pais de Hope, Hank Pym
-                        (Michael
-                        Douglas) e Janet van Dyne (Michelle Pfeiffer), o trio trabalha um caminho de volta enquanto os
-                        atrai
-                        para o misterioso mundo do Reino Quântico, onde encontram criaturas alienígenas e uma
-                        civilização
-                        oculta. Eles também descobrem que Janet, que ficou presa aqui por 30 anos, ainda esconde deles
-                        um ou
-                        dois segredos de seu passado: porque o misterioso Kang (Jonathan Majors), que tem a habilidade
-                        de
-                        passar, também está preso no quantum, a dimensão usada para viajar no tempo e no multiverso? E o
-                        mais
-                        importante: porque ele precisa da ajuda de Scott em uma missão importante? Será que o poderoso
-                        Kang
-                        pode
-                        ser confiável?
-
+                        experimento...
                     </span>
                 </p>
                 <!-- botão para modal -->
@@ -69,7 +49,7 @@
             <!-- imagem de divulgação  -->
 
             <section class="col-lg-4 d-flex justify-content-center ">
-                <img id="img-poster" class="rounded" src="public/image/homen_formiga_e_a_vespa_poster.jpg"
+                <img id="img-poster" class="rounded" src="src/image/homen_formiga_e_a_vespa_poster.jpg"
                     alt="homen_formiga_e_a_vespa_poster">
             </section>
         </div>
@@ -94,22 +74,23 @@
 
 </body>
 <script>
-    const sinopse = document.getElementById("sinopse-body");
-
+    const sinopse = document.getElementById("sinopse");
+    const [sinopse_header, sinopse_body] = sinopse.querySelectorAll("span")
     let isActive = false;
 
-    window.addEventListener("load", () => {
-        sinopse.innerHTML = `<span>
-                                    Em Homem-Formiga e a Vespa: Quantumania, quando Cassie (Kathryn Newton), filha de Scott Lang
-                                    (Paul
-                                    Rudd), desenvolve um dispositivo que permitiria a comunicação com o reino quântico, o
-                                    experimento...
-                                </span>`
+    // window.addEventListener("load", () => {
+    //     sinopse.innerHTML = `<span>
+    //                                 Em Homem-Formiga e a Vespa: Quantumania, quando Cassie (Kathryn Newton), filha de Scott Lang
+    //                                 (Paul
+    //                                 Rudd), desenvolve um dispositivo que permitiria a comunicação com o reino quântico, o
+    //                                 experimento...
+    //                             </span>`
 
-    })
+    // })
     sinopse.addEventListener("click", () => {
+
         if (!isActive) {
-            sinopse.innerHTML = `<span>         
+            sinopse_body.innerHTML = `<span>         
                                     Em Homem-Formiga e a Vespa: Quantumania, quando Cassie (Kathryn Newton), filha de Scott Lang
                                     (Paul
                                     Rudd), desenvolve um dispositivo que permitiria a comunicação com o reino quântico, o
@@ -135,7 +116,7 @@
                                 </span>`;
             isActive = true;
         } else {
-            sinopse.innerHTML = `<span>
+            sinopse_body.innerHTML = `<span>
                                     Em Homem-Formiga e a Vespa: Quantumania, quando Cassie (Kathryn Newton), filha de Scott Lang
                                     (Paul
                                     Rudd), desenvolve um dispositivo que permitiria a comunicação com o reino quântico, o
